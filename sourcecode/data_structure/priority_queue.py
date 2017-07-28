@@ -7,9 +7,6 @@ class Student:
     def __lt__(self, other):
         return self.score < other.score
 
-    def __eq__(self, other):
-        return self.score == other.score
-
     def __str__(self):
         return "{}: {}".format(self.name, self.score)
 
@@ -53,7 +50,10 @@ pq.print()
 pq2 = PriorityQueue()
 pq2.push(Student("Cuong", 10))
 pq2.push(Student("Tuan", 8))
+pq2.push(Student("Huy", 9))
 pq2.push(Student("Manh", 9))
 
+print(pq2.pop())
+print(pq2.pop())
 print(pq2.pop())
 print(pq2.pop())
